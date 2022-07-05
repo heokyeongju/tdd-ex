@@ -1,6 +1,16 @@
 package com.ll.exam;
 
 public class Calculator {
+    public static int calc(String s){
+        boolean isSubtract = s.indexOf(" - ") != -1;
+
+        if (isSubtract) {
+            return subtract(s);
+        }
+
+        return add(s);
+    }
+
     public static int add(String s){
         String[] sBits = s.split(" \\+ ");
         int no1 = Integer.parseInt(sBits[0]);
@@ -8,7 +18,7 @@ public class Calculator {
 
         return no1+no2;
     }
-    public static int minus(String s){
+    public static int subtract(String s){
         String[] sBits = s.split(" \\- ");
         int no1 = Integer.parseInt(sBits[0]);
         int no2 = Integer.parseInt(sBits[1]);
