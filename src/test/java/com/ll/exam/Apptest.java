@@ -21,4 +21,10 @@ public class Apptest {
         int rs = Calculator.add("100 + 20");
         assertEquals(120,rs);
     }
+
+    @Test
+    public void 빼기_테스트_1(){
+        int rs = Calculator.minus("100 - 20");
+        assertEquals(80,rs);
+    }
 }
